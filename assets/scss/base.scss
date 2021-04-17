@@ -1,0 +1,50 @@
+
+.navbar {
+
+
+}
+
+h1 {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 1.6rem;
+  border-bottom: solid 3px $primary-color;
+  padding-bottom: 7.5px;
+}
+
+h2 {
+  margin: 20px 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+  border-bottom: solid 3px $primary-color;
+  padding-bottom: 7.5px;
+}
+
+.btn {
+  color: #fff;
+}
+
+
+.btn-primary.disabled, .btn-primary:disabled {
+  color: #fff;
+}
+
+
+.pretty {
+  .state {
+    label {
+      text-indent: 1rem;
+    }
+  }
+}
+
+footer{
+  width: 100%;
+  background-color: $primary-color;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  font-size: 1rem;
+  bottom: 0;
+}
