@@ -8,14 +8,14 @@ const chapters = {
   },
   chapter2: {
     title: 'Nuxt.Jsの基本',
-    path:'chapter1',
+    path:'chapter2',
     contents: [
       { title: 'やってみよう', path: 'index1' },
     ]
   },
   chapter3: {
     title: '演習',
-    path:'chapter1',
+    path:'chapter3',
     contents: [
       { title: '三島コロッケアプリ', path: 'index1' },
     ]
