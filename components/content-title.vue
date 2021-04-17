@@ -1,10 +1,11 @@
 <template>
-  <h2><font-awesome-icon icon="crown"></font-awesome-icon>{{text}}</h2>
+<h2><font-awesome-icon icon="star"></font-awesome-icon>{{text}}</h2>
 </template>
 
 <script>
 export default {
-  name: "content-title"
+  name: "content-title",
+  props: ['text']
 }
 </script>
 

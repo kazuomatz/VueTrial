@@ -5,9 +5,12 @@
         <ChapterTitle :text="chapters[key].title"/>
         <ol>
           <li v-for="content in chapters[key].contents">
-            <nuxt-link :to="chapters[key].path + '/' + content.path">
+            <nuxt-link :to="chapters[key].path + '/' + content.path" v-if="content.path">
               {{content.title}}
             </nuxt-link>
+            <span v-else>
+              {{content.title}}
+            </span>
           </li>
         </ol>
       </div>

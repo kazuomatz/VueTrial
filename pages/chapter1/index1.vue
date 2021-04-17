@@ -4,6 +4,9 @@
       <div class="col-sm-12">
         <ChapterTitle text="Vueの基本"/>
       </div>
+      <div class="col-sm-12">
+        <ContentTitle text="やってみよう"/>
+      </div>
     </div>
   </div>
 </template>
