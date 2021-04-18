@@ -11,9 +11,7 @@
 
       <div class="col-sm-12">
         <div class="sandbox">
-          <h3 v-if="status == 1">{{ message1 }}</h3>
-          <h3 v-else-if="status == 2">{{ message2 }}</h3>
-          <h3 v-else="status == 3">{{ message3 }}</h3>
+          <h3 v-show="status == 1">{{ message }}</h3>
         </div>
       </div>
     </div>
@@ -39,6 +37,13 @@
         </vue-code-highlight>
       </div>
     </div>
+    
+    <div class="row">
+        <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
+          <nuxt-link to='/' class="btn btn-block btn-primary"> <font-awesome-icon icon="home"></font-awesome-icon> TOPに戻る </nuxt-link>
+        </div>
+    </div>
+
   </div>
 </template>>
 
@@ -50,15 +55,13 @@ export default {
     return  {
       chapter: null,
       content: null,
-      status: 1,
-      message1: 'Hello Vuetrial !!',
-      message2: 'Good Morning Vuetrial !!',
-      message3: 'Good Evening Vuetrial !!',
+      status: false,
+      message: 'Hello Vuetrial !!',
     }
   },
   created() {
     this.chapter = this.$chapters['chapter1']
-    this.content = this.chapter.contents[1]
+    this.content = this.chapter.contents[2]
   }
 }
 </script>
