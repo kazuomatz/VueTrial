@@ -16,7 +16,7 @@
 </template>
 
 <script>
-export default{
+export default {
   computed: {
     chapters () {
       return this.$chapters
