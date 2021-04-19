@@ -13,7 +13,7 @@
         <div class="sandbox">
           <h3 v-if="status == 1">{{ message1 }}</h3>
           <h3 v-else-if="status == 2">{{ message2 }}</h3>
-          <h3 v-else="status == 3">{{ message3 }}</h3>
+          <h3 v-else>{{ message3 }}</h3>
         </div>
       </div>
     </div>
@@ -21,10 +21,8 @@
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">Vue</span>
-        <vue-code-highlight language="javascript">
-          <pre>
+        <vue-code-highlight language="markup">
           {{content.html}}
-          </pre>
         </vue-code-highlight>
       </div>
     </div>
@@ -33,24 +31,22 @@
       <div class="col-sm-8">
         <span class="badge badge-primary">JS</span>
         <vue-code-highlight language="javascript">
-          <pre>
           {{content.code}}
-          </pre>
         </vue-code-highlight>
       </div>
     </div>
-  
-  
+
+
     <div class="row">
         <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
-          <nuxt-link to='/' class="btn btn-block btn-primary"> <font-awesome-icon icon="home"></font-awesome-icon> TOPに戻る </nuxt-link>
+          <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
         </div>
     </div>
 
-  
+
   </div>
 
-  
+
 </template>>
 
 

@@ -21,7 +21,7 @@
           </tr>
           <tr>
             <td>JSONデータ</td>
-            <td>EXCELファイルをJSON化しました。-> <a :href="url" target="_blank"><font-awesome-icon icon="file-code"/></a></td>
+            <td>EXCELファイルをJSON化しました。-> <a :href="url" target="_blank"><fa icon="file-code"/></a></td>
           </tr>
         </table>
       </div>

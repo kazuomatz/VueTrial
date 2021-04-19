@@ -19,10 +19,8 @@
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">Vue</span>
-        <vue-code-highlight language="javascript">
-          <pre>
+        <vue-code-highlight language="markup">
           {{content.html}}
-          </pre>
         </vue-code-highlight>
       </div>
     </div>
@@ -31,16 +29,14 @@
       <div class="col-sm-8">
         <span class="badge badge-primary">JS</span>
         <vue-code-highlight language="javascript">
-          <pre>
           {{content.code}}
-          </pre>
         </vue-code-highlight>
       </div>
     </div>
-    
+
     <div class="row">
         <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
-          <nuxt-link to='/' class="btn btn-block btn-primary"> <font-awesome-icon icon="home"></font-awesome-icon> TOPに戻る </nuxt-link>
+          <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
         </div>
     </div>
 
@@ -50,7 +46,7 @@
 
 <script>
 export default {
-  name: "index2.vue",
+  name: "index3.vue",
   data() {
     return  {
       chapter: null,

@@ -1,5 +1,5 @@
 <template>
-<h1><font-awesome-icon icon="crown"></font-awesome-icon>{{text}}</h1>
+<h1><fa icon="crown"></fa>{{text}}</h1>
 </template>
 
 <script>

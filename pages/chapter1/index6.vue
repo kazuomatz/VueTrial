@@ -11,11 +11,27 @@
 
       <div class="col-sm-12">
         <div class="sandbox">
-          <ul>
-            <li v-for="fruit in fruits" v-bind:key="fruit.id">
-              {{fruit.name}}
-            </li>
-          </ul>
+          <form>
+            <div class="form-inline">
+              <div class="form-group">
+                <input type="number"
+                       name="value-1"
+                       class="form-control"
+                       v-model.number="value1"/>
+              </div>
+              <div class="plus"> + </div>
+              <div class="form-group">
+                <input type="number"
+                       name="value-1"
+                       class="form-control"
+                       v-model.number="value2"/>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <label>答え</label>
+              <div class="answer">{{ calc() }}</div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -38,12 +54,12 @@
       </div>
     </div>
 
+
     <div class="row">
       <div class="col-sm-12">
         <div class="check-point">
-          v-forにkeyを与えるのが、「スタイルガイド」に定められた「必須」のルールです(「<a href="https://jp.vuejs.org/v2/style-guide/#キー付き-v-for-必須" target="_blank">キー付き v-for</a>」)。<br/>
-          タグ何に v-bind:<b><i>属性名</i></b>:="値 or 式" と記述するとHTML要素の属性値に式や値が指定できます。
-          この場合はkeyの属性値を設定するので<br/>v-bind:key="fruit.id" と記述しますが、 通常省略して :key="fruit.id"と記述します( <a href="https://jp.vuejs.org/v2/guide/syntax.html#v-bind-%E7%9C%81%E7%95%A5%E8%A8%98%E6%B3%95" target="_blank">v-bind 省略記法</a>)。
+          inputタグだけでなく、textarea、select、checkbox、radioもバインディングできます（ <a href="https://jp.vuejs.org/v2/guide/forms.html" target="_blank">フォーム入力バインディング</a> )。<br/>
+          v-model.number="xxxx" とすると、入力値をnumberに変換します。
         </div>
       </div>
     </div>
@@ -60,27 +76,34 @@
 
 <script>
 export default {
-  name: "index4.vue",
+  name: "index6.vue",
   data() {
     return  {
       chapter: null,
       content: null,
-      fruits: [
-        {id: 1, name: 'Apple'},
-        {id: 2, name: 'Banana'},
-        {id: 3, name: 'Melon'},
-        {id: 4, name: 'Orange'},
-        {id: 5, name: 'Kiwi'}
-      ],
+      value1: 0,
+      value2: 0
+    }
+  },
+  methods: {
+    calc() {
+      return this.value1 + this.value2;
     }
   },
   created() {
     this.chapter = this.$chapters['chapter1']
-    this.content = this.chapter.contents[3]
+    this.content = this.chapter.contents[5]
   }
 }
 </script>
 
 <style scoped>
-
+.answer {
+  font-size: 1.2rem;
+  color: red;
+  padding: 0.375rem 0.75rem;
+}
+.plus {
+  padding: 0 15px;
+}
 </style>
