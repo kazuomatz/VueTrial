@@ -36,8 +36,6 @@
             </li>
           </ul>
         </div>
-
-
       </div>
 
       <div class="col-sm-12">
@@ -95,7 +93,7 @@
 <script>
 
 export default {
-  name: "index9.vue",
+  name: 'index9.vue',
   data() {
     return  {
       chapter: null,

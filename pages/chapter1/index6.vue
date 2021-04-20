@@ -70,7 +70,7 @@
 
 <script>
 export default {
-  name: "index6.vue",
+  name: 'index6.vue',
   data() {
     return  {
       chapter: null,

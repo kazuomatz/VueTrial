@@ -10,8 +10,8 @@
 
       <div class="col-sm-12">
         <div class="sandbox">
-          <h3 v-if="status == 1">{{ message1 }}</h3>
-          <h3 v-else-if="status == 2">{{ message2 }}</h3>
+          <h3 v-if="status === 1">{{ message1 }}</h3>
+          <h3 v-else-if="status === 2">{{ message2 }}</h3>
           <h3 v-else>{{ message3 }}</h3>
         </div>
       </div>
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: "index2.vue",
+  name: 'index2.vue',
   data() {
     return  {
       chapter: null,

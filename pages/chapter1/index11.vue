@@ -7,7 +7,6 @@
         <ContentTitle :text="content.title"/>
         <div class="summary">{{ content.summary }}</div>
       </div>
-
       <div class="col-sm-12">
         <div class="sandbox">
           <label>クリック回数</label>
@@ -20,42 +19,40 @@
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">Vue</span>
-        <vue-code-highlight language="markup">{{content.html}}</vue-code-highlight>
+        <vue-code-highlight language="markup">{{this.content.html}}</vue-code-highlight>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">JS</span>
-        <vue-code-highlight language="javascript">{{content.code}}</vue-code-highlight>
+        <vue-code-highlight  language="javascript">{{this.content.code}}</vue-code-highlight >
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-12">
         <div class="check-point">
-          v-on:click="xxxx" は、省略形で @click="xxxx" と記述することもできます。
+          data.count を watch で監視します。 10回ボタンが押されたら、サーバーにデータを送信します。
         </div>
       </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
-          <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
-        </div>
+      <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
+        <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
+      </div>
     </div>
-
   </div>
 </template>
 
 <script>
+
 export default {
-  name: 'index7.vue',
+  name: 'index11.vue',
   data() {
     return  {
-      chapter: null,
-      content: null,
-      count: 0
+      count: 1
     }
   },
   methods: {
@@ -63,14 +60,24 @@ export default {
       this.count ++;
     }
   },
+  watch: {
+    count() {
+      if (this.count % 10 === 0 ) {
+        /* ajaxでデータを送信 */
+        console.log("データ送信 カウント: " + this.count)
+      }
+    }
+  },
+  mounted() {
+  },
   created() {
     this.chapter = this.$chapters['chapter1']
-    this.content = this.chapter.contents[6]
+    this.content = this.chapter.contents[10]
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .answer {
   font-size: 1.2rem;
   color: red;

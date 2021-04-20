@@ -54,7 +54,7 @@
 
 <script>
 export default {
-  name: "index4.vue",
+  name: 'index4.vue',
   data() {
     return  {
       chapter: null,

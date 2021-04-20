@@ -33,3 +33,7 @@ div pre[class*="language-"]{
 .container {
   margin-bottom: 100px;
 }
+
+pre[class*="language-"]{
+  padding-left: 20px !important;
+}

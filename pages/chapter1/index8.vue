@@ -51,17 +51,16 @@
 
 <script>
 export default {
-  name: "index8.vue",
+  name: 'index8.vue',
   data() {
     return  {
       chapter: null,
-      content: null,
       message: 'Hello VueTrial !!'
     }
   },
   methods: {
-    countUp() {
-      this.count ++;
+    funcA() {
+      /* do something */
     }
   },
   created() {

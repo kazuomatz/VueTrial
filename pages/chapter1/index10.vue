@@ -42,10 +42,12 @@
             <label>現在時刻</label>
             <div class="answer">{{ currentTime }}</div>
           </div>
+
           <div class="mt-3">
             <label>10秒後は？(methods)</label>
             <div class="answer">{{ method10Seconds() }}</div>
           </div>
+
           <div class="mt-3">
             <label>10秒後は？(computed)</label>
             <div class="answer">{{ compute10Seconds }}</div>
@@ -79,7 +81,7 @@
 <script>
 
 export default {
-  name: "index10.vue",
+  name: 'index10.vue',
   data() {
     return  {
       chapter: null,
