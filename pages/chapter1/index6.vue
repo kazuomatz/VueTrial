@@ -1,7 +1,6 @@
 <template>
   <div class="container">
 
-
     <div class="row">
       <div class="col-sm-12">
         <ChapterTitle :text="chapter.title"/>
@@ -67,8 +66,7 @@
     </div>
 
   </div>
-</template>>
-
+</template>
 
 <script>
 export default {

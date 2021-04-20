@@ -243,7 +243,7 @@ const chapters = {
    `
       },
       {
-        title: '1.9 メソッドと算出プロパティ',
+        title: '1.9 メソッドと算出プロパティ(1)',
         path: 'index9',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
         html: `
@@ -280,7 +280,6 @@ const chapters = {
   export default {
     data() {
       return  {
-        message: 'Hello VueTrial !!',
         value1: 0,
         value2: 0,
       }
@@ -295,7 +294,7 @@ const chapters = {
         return this.value1 + this.value2
       }
     }
-  }  
+  }
   `
       },
       {
@@ -305,53 +304,54 @@ const chapters = {
         html: `
   <div class="col-sm-12">
     <div class="sandbox">
-      <form>
-        <div class="form-inline">
-          <div class="form-group">
-            <input type="number"
-                   class="form-control"
-                   v-model.number="value1"/>
+        <div class="mt-3">
+            <label>現在時刻</label>
+            <div class="answer">{{ currentTime }}</div>
+        </div>
+        <div class="mt-3">
+            <label>10秒後は？(methods)</label>
+            <div class="answer">{{ method10Seconds() }}</div>
+         </div>
+         <div class="mt-3">
+            <label>10秒後は？(computed)</label>
+            <div class="answer">{{ compute10Seconds }}</div>
           </div>
-          <div class="plus"> + </div>
-          <div class="form-group">
-            <input type="number"
-                   class="form-control"
-                   v-model.number="value2"/>
-           </div>
         </div>
-
-        <div class="form-group mt-3">
-          <label>答え(methods)</label>
-          <div class="answer">{{ calcMethod() }}</div>
-        </div>
-
-        <div class="form-group mt-3">
-          <label>答え(computed)</label>
-          <div class="answer">{{ calcComputed }}</div>
-        </div>
-      </form>
     </div>
   </div>`,
         code: `
   export default {
     data() {
       return  {
-        message: 'Hello VueTrial !!',
-        value1: 0,
-        value2: 0,
+        time1: null,
+        time2: null,
+        currentTime: null
       }
     },
     methods: {
-      calcMethod() {
-        return this.value1 + this.value2
+      method10Seconds() {
+        const dt = new Date()
+        dt.setSeconds(dt.getSeconds() + 10)
+        return dt;
       }
     },
     computed: {
-      calcComputed() {
-        return this.value1 + this.value2
-      }
+       compute10Seconds() {
+         const dt = new Date()
+         dt.setSeconds(dt.getSeconds() + 10)
+         return dt;
+       }
+    },
+    mounted() {
+      this.time1 = new Date()
+      this.time2 = new Date()
+      this.currentTime = new Date()
+
+      setInterval(()=> {
+        this.currentTime = new Date()
+      },1000)
     }
-  }  
+  }
   `
       },
     ],

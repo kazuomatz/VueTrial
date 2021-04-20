@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <div class="row">
       <div class="col-sm-12">
         <ChapterTitle :text="chapter.title"/>
@@ -84,25 +85,17 @@
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
-        <div class="check-point">
-        </div>
-      </div>
-    </div>
-
-    <div class="row">
       <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
         <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
       </div>
     </div>
   </div>
-</template>>
-
+</template>
 
 <script>
 
 export default {
-  name: "index7.vue",
+  name: "index9.vue",
   data() {
     return  {
       chapter: null,

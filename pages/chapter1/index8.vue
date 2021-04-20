@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+
     <div class="row">
       <div class="col-sm-12">
         <ChapterTitle :text="chapter.title"/>
@@ -46,12 +47,11 @@
         </div>
     </div>
   </div>
-</template>>
-
+</template>
 
 <script>
 export default {
-  name: "index7.vue",
+  name: "index8.vue",
   data() {
     return  {
       chapter: null,
