@@ -23,18 +23,14 @@
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">Vue</span>
-        <vue-code-highlight language="markup">
-          {{content.html}}
-        </vue-code-highlight>
+        <vue-code-highlight language="markup">{{content.html}}</vue-code-highlight>
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-8">
         <span class="badge badge-primary">JS</span>
-        <vue-code-highlight language="javascript">
-          {{content.code}}
-        </vue-code-highlight>
+        <vue-code-highlight language="javascript">{{content.code}}</vue-code-highlight>
       </div>
     </div>
 

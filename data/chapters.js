@@ -114,15 +114,15 @@ const chapters = {
                      class="form-control"
                      v-model="value1"/>
             </div>
-            <div class="form-group">
-              <label>入力された値</label>
-              <div class="value-1">{{value1}}</div>
-            </div>
-            <div class="form-group mt-3">
-              <label>答え</label>
-              <div class="answer">{{ calc() }}</div>
-            </div>
-         </form>
+          </form>
+          <div class="form-group">
+            <label>入力された値</label>
+            <div class="value-1">{{value1}}</div>
+          </div>
+          <div class="form-group mt-3">
+            <label>答え</label>
+            <div class="answer">{{ calc() }}</div>
+          </div>
     </div>
   </div>    `,
         code: `
@@ -145,13 +145,13 @@ const chapters = {
         <form>
             <div class="form-inline">
               <div class="form-group">
-                <input type="text"
+                <input type="number"
                        class="form-control"
                        v-model.number="value1"/>
               </div>
               <div class="plus"> + </div>
               <div class="form-group">
-                <input type="text"
+                <input type="number"
                        class="form-control"
                        v-model.number="value2"/>
               </div>
@@ -206,7 +206,152 @@ const chapters = {
       countUp() {
         this.count ++;
       }
+    }
   },
+  `
+      },
+      {
+        title: '1.8 Vueコンポーネントのファイルの構成',
+        path: 'index8',
+        summary: '拡張子.vueのファイルは、単一ファイルコンポーネントのファイル(SFC:Single File Component)です。Viewを構成するHTMLテンプレート、JavaScript、CSSから構成されます。',
+        html: `
+  <template>
+    <h1 class="title">{{ message }}</h1>
+  </template>    `,
+        code: `
+  export default {
+    data() {
+      return  {
+        message: 'Hello VueTrial !!'
+      }
+    },
+    methods: {
+      funcA() {
+        ;
+      }
+    }
+  }
+  `,
+      css: `
+  <style lang="scss" scoped>
+    h1 {
+        &.title {
+            color: red;
+        }
+    }
+  </style>
+   `
+      },
+      {
+        title: '1.9 メソッドと算出プロパティ',
+        path: 'index9',
+        summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
+        html: `
+  <div class="col-sm-12">
+    <div class="sandbox">
+      <form>
+        <div class="form-inline">
+          <div class="form-group">
+            <input type="number"
+                   class="form-control"
+                   v-model.number="value1"/>
+          </div>
+          <div class="plus"> + </div>
+          <div class="form-group">
+            <input type="number"
+                   class="form-control"
+                   v-model.number="value2"/>
+           </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label>答え(methods)</label>
+          <div class="answer">{{ calcMethod() }}</div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label>答え(computed)</label>
+          <div class="answer">{{ calcComputed }}</div>
+        </div>
+      </form>
+    </div>
+  </div>`,
+        code: `
+  export default {
+    data() {
+      return  {
+        message: 'Hello VueTrial !!',
+        value1: 0,
+        value2: 0,
+      }
+    },
+    methods: {
+      calcMethod() {
+        return this.value1 + this.value2
+      }
+    },
+    computed: {
+      calcComputed() {
+        return this.value1 + this.value2
+      }
+    }
+  }  
+  `
+      },
+      {
+        title: '1.10 メソッドと算出プロパティ',
+        path: 'index10',
+        summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
+        html: `
+  <div class="col-sm-12">
+    <div class="sandbox">
+      <form>
+        <div class="form-inline">
+          <div class="form-group">
+            <input type="number"
+                   class="form-control"
+                   v-model.number="value1"/>
+          </div>
+          <div class="plus"> + </div>
+          <div class="form-group">
+            <input type="number"
+                   class="form-control"
+                   v-model.number="value2"/>
+           </div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label>答え(methods)</label>
+          <div class="answer">{{ calcMethod() }}</div>
+        </div>
+
+        <div class="form-group mt-3">
+          <label>答え(computed)</label>
+          <div class="answer">{{ calcComputed }}</div>
+        </div>
+      </form>
+    </div>
+  </div>`,
+        code: `
+  export default {
+    data() {
+      return  {
+        message: 'Hello VueTrial !!',
+        value1: 0,
+        value2: 0,
+      }
+    },
+    methods: {
+      calcMethod() {
+        return this.value1 + this.value2
+      }
+    },
+    computed: {
+      calcComputed() {
+        return this.value1 + this.value2
+      }
+    }
+  }  
   `
       },
     ],
