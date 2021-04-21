@@ -1,4 +1,4 @@
-# vuetrial
+# VueTrial
 
 ## Build Setup
 

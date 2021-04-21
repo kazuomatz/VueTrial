@@ -1,5 +1,6 @@
 export default {
-  mode: 'spa',
+  ssr: false,
+  target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'VueTrial',
@@ -36,12 +37,15 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
-    'bootstrap-vue/nuxt',
+    ['bootstrap-vue/nuxt', {css: false}],
     "@nuxtjs/axios"
   ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
+    babel: {
+      babelrc: false,
+      compact: false
+    }
   }
 }

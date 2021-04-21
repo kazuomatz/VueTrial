@@ -325,15 +325,13 @@ const chapters = {
         path: 'index11',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
         html: 
-`<div class="col-sm-12">
-  <div class="sandbox">
-    <label>クリック回数</label>
-    <div class="answer">{{ count }}</div>
-    <button type="button"
-            v-on:click="countUp"
-            class="btn btn-primary">カウント
-    </button>
-  </div>
+`<div class="sandbox">
+  <label>クリック回数</label>
+  <div class="answer">{{ count }}</div>
+  <button type="button"
+          v-on:click="countUp"
+          class="btn btn-primary">カウント
+  </button>
 </div>`,
         code:
 `export default {
@@ -357,20 +355,155 @@ const chapters = {
   }
 }`
       },
+      {
+        title: '1.12 Vueのライフサイクル',
+        path: 'index12',
+        summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
+        html: 
+`<div class="sandbox">
+  {{message}}
+</div>
+`,
+        code:
+`export default {
+  data() {
+    return  {
+      messages: []
+    }
+  },
+  computed: {
+    message () {
+      return this.messages.join(' -> ')
+    }
+  },
+  beforeCreate() {
+    // 呼ぶとエラー
+    //this.messages.push('beforeCreate')
+  },
+  created() {
+    this.messages.push('created')
+  },
+  beforeMount() {
+    this.messages.push('beforeMount')
+  },
+  mounted() {
+    this.messages.push('mounted')
+  },
+  beforeUpdate() {
+    console.log(this.message + ' -> ' + 'beforeUpdate')
+
+    // 呼ぶと無限ループ
+    // this.messages.push('beforeUpdate')
+  },
+  updated() {
+    console.log(this.message + ' -> ' + 'updated')
+
+    // 呼ぶと無限ループ
+    // this.messages.push('updated')
+  },
+  beforeDestroy() {
+    this.messages.push('beforeDestroy')
+  },
+  destroyed() {
+    this.messages.push('destroyed')
+  }
+}`
+      },      
     ],
   },
   chapter2: {
-    title: 'Nuxt.Jsの基本',
+    title: '2.Nuxt.Jsの基本',
     path:'chapter2',
     contents: [
-      { title: 'やってみよう', path: 'index1' },
+      { 
+        title: '1.デプロイターゲット', 
+        path: 'index1',
+        html:
+`
+`,
+        code: 
+`export default {
+  ssr: false,
+  target: 'static',
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  head: {
+    title: 'VueTrial',
+    htmlAttrs: {
+      lang: 'ja'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ]
+  },
+  :
+  :
+  :`
+      },
+      { 
+        title: '2.ディクトリー構造とルーティング', 
+        path: 'index2',
+        html:
+`<div class="sandbox">
+  <h1>{{ currentPhoto.title }}</h1>
+  <img :src="currentPhotoPath" alt="photo" class="img-thumbnail rounded mx-auto d-block"/>
+  <div class="col-sm-12 text-center">
+    <div class="caption">
+      {{ currentPhoto.caption }}
+    </div>
+    <div class="buttons">
+      <b-button :to="'/photos/' + (id - 1)" :disabled="id - 1 === 0" variant="primary"> 
+        <fa icon="angle-double-left"/> 
+      </b-button>
+      <b-button :to="'/photos/' + (id + 1)" :disabled="id + 1 > photos.length" variant="primary"> 
+        <fa icon="angle-double-right"/> 
+      </b-button>
+    </div>
+  </div>
+</div>`,
+        code: 
+`export default {
+  name: "id.vue",
+  data () {
+    return {
+      id: parseInt(this.$route.params.id),
+      photos: [
+        { id:  1, title: '写真１', caption: 'ジャンプする犬', file: '01.jpg' },
+        { id:  2, title: '写真２', caption: 'カメラ女子', file: '02.jpg' },
+        { id:  3, title: '写真３', caption: '港の夜景', file: '03.jpg' },
+        { id:  4, title: '写真４', caption: '山頂へと続く道', file: '04.jpg' },
+        { id:  5, title: '写真５', caption: 'お洒落なバーで', file: '05.jpg' },
+        { id:  6, title: '写真６', caption: '雰囲気のあるカフェ', file: '06.jpg' },
+        { id:  7, title: '写真７', caption: 'ちょっと不機嫌な猫', file: '07.jpg' },
+        { id:  8, title: '写真８', caption: 'コロッケ大好き', file: '08.jpg' },
+        { id:  9, title: '写真９', caption: '日本酒女子', file: '09.jpg' },
+        { id: 10, title: '写真10', caption: '青い空と海', file: '10.jpg' }
+      ]
+    }
+  },
+  computed: {
+    currentPhoto() {
+      return this.photos.filter( (article) => { return article.id === this.id } )[0]
+    },
+    currentPhotoPath() {
+      return '/images/' + this.currentPhoto.file;
+    }
+  }
+}
+` 
+      },
+
     ]
   },
   chapter3: {
     title: '演習',
     path:'chapter3',
     contents: [
-      { title: '三島コロッケアプリ', path: 'index1' },
+      { title: 'APIを使った簡単なWebページ', path: 'index1' },
     ]
   }
 }

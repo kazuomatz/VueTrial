@@ -2,7 +2,7 @@
 
   <div>
     <NavBar/>
-    <Nuxt />
+    <div class="app-body"><nuxt :nuxt-child-key="$route.fullPath" /></div>
     <Footer/>
   </div>
 

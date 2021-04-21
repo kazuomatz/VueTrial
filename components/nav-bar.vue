@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="primary">
-      <b-navbar-brand href="/">Vuetrial</b-navbar-brand>
+      <b-navbar-brand href="/">VueTrial</b-navbar-brand>
       <b-collapse id="nav-collapse" is-nav>
       </b-collapse>
     </b-navbar>

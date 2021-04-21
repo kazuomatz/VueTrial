@@ -11,3 +11,4 @@ Vue.prototype.$chapters = chapters
 import { component as VueCodeHighlight  } from 'vue-code-highlight'
 Vue.component('VueCodeHighlight', VueCodeHighlight)
 import 'prism-es6/components/prism-markup-templating';
+import 'prism-es6/components/prism-bash';
