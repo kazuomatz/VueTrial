@@ -7,12 +7,12 @@ const chapters = {
         title: '1.1 宣言的レンダリング',
         path: 'index1',
         summary: 'テンプレート構文を使って宣言的にデータをDOMに描画します。',
-        html: 
+        html:
 `<div class="sandbox">
   <h3> Message Here.</h3>
 　<div>{{ message }}</div>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -25,13 +25,13 @@ const chapters = {
         title: '1.2 条件分岐による制御',
         path: 'index2',
         summary: 'v-if ディレクティブを使って要素の表示の有無を切り換えます。',
-        html: 
+        html:
 `<div class="sandbox">
   <h3 v-if="status === 1">{{ message1 }}</h3>
   <h3 v-else-if="status === 2">{{ message2 }}</h3>
   <h3 v-else>{{ message3 }}</h3>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -47,11 +47,11 @@ const chapters = {
         title: '1.3 条件分岐による制御(v-show)',
         path: 'index3',
         summary: 'v-show ディレクティブを使って要素の表示/非表示を切り換えます。v-ifディレクティブとの違いは、v-ifディレクティブはDOM要素を作成するかどうかを制御するのに対して、v-showディレクティブはDOM要素は作成し、表示するかしないかを制御します。',
-        html: 
+        html:
 `<div class="sandbox">
   <h3 v-show="status">{{ message }}</h3>
 </div> `,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -65,7 +65,7 @@ const chapters = {
         title: '1.4 ループ',
         path: 'index4',
         summary: 'v-for ディレクティブを使って配列要素をレンダリングします。',
-        html: 
+        html:
 `<div class="sandbox">
   <ul>
     <li v-for="fruit in fruits" :key="fruit.id">
@@ -73,7 +73,7 @@ const chapters = {
     </li>
   </ul>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -116,7 +116,7 @@ const chapters = {
         title: '1.6 フォーム入力バインディング（計算機)',
         path: 'index6',
         summary: 'v-model ディレクティブを使ってユーザーフォームの値をオブジェクトにバインドします。',
-        html: 
+        html:
 `<div class="sandbox">
   <form>
       <div class="form-inline">
@@ -138,7 +138,7 @@ const chapters = {
       </div>
   </form>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -157,7 +157,7 @@ const chapters = {
         title: '1.7 イベントハンドリング',
         path: 'index7',
         summary: 'v-on ディレクティブを使ってイベントをハンドリングします。',
-        html: 
+        html:
 `<div class="sandbox">
   <label>クリック回数</label>
   <div class="answer">{{ count }}</div>
@@ -167,7 +167,7 @@ const chapters = {
           カウント
   </button>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -185,11 +185,10 @@ const chapters = {
         title: '1.8 Vueコンポーネントのファイルの構成',
         path: 'index8',
         summary: '拡張子.vueのファイルは、単一ファイルコンポーネントのファイル(SFC:Single File Component)です。Viewを構成するHTMLテンプレート、JavaScript、CSSから構成されます。',
-        html: 
-`<template>
+        html: `<template>
   <h1 class="title">{{ message }}</h1>
 </template> `,
-      code: 
+      code:
 `export default {
   data() {
     return  {
@@ -202,7 +201,7 @@ const chapters = {
     }
   }
 }`,
-      css: 
+      css:
 `<style lang="scss" scoped>
   h1 {
     &.title {
@@ -216,7 +215,7 @@ const chapters = {
         title: '1.9 メソッドと算出プロパティ(1)',
         path: 'index9',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
-        html: 
+        html:
 `<div class="sandbox">
   <form>
     <div class="form-inline">
@@ -245,7 +244,7 @@ const chapters = {
     </div>
   </form>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -286,7 +285,7 @@ const chapters = {
     <div class="answer">{{ compute10Seconds }}</div>
   </div>
 </div>`,
-        code: 
+        code:
 `export default {
   data() {
     return  {
@@ -324,7 +323,7 @@ const chapters = {
         title: '1.11 ウォッチャー',
         path: 'index11',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
-        html: 
+        html:
 `<div class="sandbox">
   <label>クリック回数</label>
   <div class="answer">{{ count }}</div>
@@ -349,7 +348,7 @@ const chapters = {
     count() {
       if (this.count % 10 === 0 ) {
         /* ajaxでデータを送信 */
-        console.log("データ送信 カウント: " + this.count) // 仮 
+        console.log("データ送信 カウント: " + this.count) // 仮
       }
     }
   }
@@ -359,7 +358,7 @@ const chapters = {
         title: '1.12 Vueのライフサイクル',
         path: 'index12',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
-        html: 
+        html:
 `<div class="sandbox">
   {{message}}
 </div>
@@ -408,20 +407,77 @@ const chapters = {
     this.messages.push('destroyed')
   }
 }`
-      },      
+      },
+      {
+        title: '1.13 Vue コンポーネント',
+        path: 'index13',
+        summary: 'Vueをコンポーネント化して再利用可能にします。',
+        html:
+`<div class="row">
+  <animal-component :object="animal" class="col-sm-2"
+          v-for="animal in animals" :key="animal.key"
+          v-on:bark="message = $event"/>
+  </div>
+  <div class="message">{{ message }}</div>
+<div>`,
+        code: `import animalComponent from '~/components/animal-component';
+
+export default {
+  components: { animalComponent },
+  data() {
+    return  {
+      message: '',
+      animals : [
+        { id: 1, name: 'ブタ', file: 'buta.png', bark: 'ブー' },
+        { id: 2, name: 'ヒツジ', file: 'hitsuji.png', bark: 'メー' },
+        { id: 3, name: 'イヌ🐶', file: 'inu.png', bark: 'ワンワン' },
+        { id: 4, name: 'クマ', file: 'kuma.png', bark: 'クマッ' },
+        { id: 5, name: 'ライオン', file: 'lion.png', bark: 'ガオー' },
+        { id: 6, name: 'ネコ🐱', file: 'neko.png', bark: 'ニャー' },
+        { id: 7, name: 'ウマ', file: 'uma.png', bark: 'ヒヒーン' },
+        { id: 8, name: 'ゾウ', file: 'zou.png', bark: 'パオー' },
+        { id: 9, name: 'トラ', file: 'tora.png', bark: 'ガオー' },
+        { id: 10, name: 'パンダ', file: 'panda.png', bark: 'フゥルフゥル～' },
+        { id: 11, name: 'ウサギ', file: 'usagi.png', bark: '・・・' },
+        { id: 12, name: 'サル', file: 'saru.png', bark: 'ウッキー' },
+      ],
+    }
+  }
+}`,
+        componentHtml: `<template>
+  <div>
+    <img :src="imagePath" :alt="object.name" v-on:click="bark"/>
+    <label>{{object.name}}</label>
+  </div>
+</template>`,
+        componentCode: `export default {
+  name: 'animal',
+  props: [ 'object' ],
+  computed: {
+    imagePath () {
+      return '/images/animal/' + this.object.file
+    }
+  },
+  methods: {
+    bark() {
+      this.$emit('bark', this.object.bark)
+    }
+  }
+}`
+      },
     ],
   },
   chapter2: {
     title: '2.Nuxt.Jsの基本',
     path:'chapter2',
     contents: [
-      { 
-        title: '1.デプロイターゲット', 
+      {
+        title: '1.デプロイターゲット',
         path: 'index1',
         html:
 `
 `,
-        code: 
+        code:
 `export default {
   ssr: false,
   target: 'static',
@@ -444,8 +500,8 @@ const chapters = {
   :
   :`
       },
-      { 
-        title: '2.ディクトリー構造とルーティング', 
+      {
+        title: '2.ディクトリー構造とルーティング',
         path: 'index2',
         html:
 `<div class="sandbox">
@@ -456,16 +512,16 @@ const chapters = {
       {{ currentPhoto.caption }}
     </div>
     <div class="buttons">
-      <b-button :to="'/photos/' + (id - 1)" :disabled="id - 1 === 0" variant="primary"> 
-        <fa icon="angle-double-left"/> 
+      <b-button :to="'/photos/' + (id - 1)" :disabled="id - 1 === 0" variant="primary">
+        <fa icon="angle-double-left"/>
       </b-button>
-      <b-button :to="'/photos/' + (id + 1)" :disabled="id + 1 > photos.length" variant="primary"> 
-        <fa icon="angle-double-right"/> 
+      <b-button :to="'/photos/' + (id + 1)" :disabled="id + 1 > photos.length" variant="primary">
+        <fa icon="angle-double-right"/>
       </b-button>
     </div>
   </div>
 </div>`,
-        code: 
+        code:
 `export default {
   name: "id.vue",
   data () {
@@ -494,7 +550,7 @@ const chapters = {
     }
   }
 }
-` 
+`
       },
 
     ]
@@ -503,7 +559,29 @@ const chapters = {
     title: '演習',
     path:'chapter3',
     contents: [
-      { title: 'APIを使った簡単なWebページ', path: 'index1' },
+      {
+        title: 'APIを使った簡単なWebページ',
+        path: 'index1',
+        code:
+`export default {
+  data() {
+    return {
+      url: 'https://d1zo7z5hf7zka2.cloudfront.net/croquette.json',
+      shops: []
+    }
+  },
+  mounted() {
+    this.getData()
+  },
+  methods: {
+    async getData() {
+       const data = await this.$axios.$get(this.url)
+       this.shops = data.shops;
+    }
+  }
+}`
+
+      },
     ]
   }
 }

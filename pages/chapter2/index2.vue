@@ -3,8 +3,8 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <ChapterTitle :text="chapter.title"/>
-        <ContentTitle :text="content.title"/>
+        <chapter-title :text="chapter.title"/>
+        <content-title :text="content.title"/>
 
         <h3 class="mb-3">ディレクトリ構成</h3>
         <vue-code-highlight language="bash">- assets/             # Sassフォイル、画像、フォントなどコンパイルされていないアセット

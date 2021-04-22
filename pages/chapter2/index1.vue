@@ -3,8 +3,8 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <ChapterTitle :text="chapter.title"/>
-        <ContentTitle :text="content.title"/>
+        <chapter-title :text="chapter.title"/>
+        <content-title :text="content.title"/>
 
         <div>
           <h3>特徴</h3>

@@ -3,8 +3,8 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <ChapterTitle :text="chapter.title"/>
-        <ContentTitle :text="content.title"/>
+        <chapter-title :text="chapter.title"/>
+        <content-title :text="content.title"/>
 
         <p>
           公式サイト（<a href="https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム" target="_blank">ライフサイクルのダイアグラム</a> ）

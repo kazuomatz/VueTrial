@@ -3,7 +3,7 @@
 
     <div class="row">
       <div class="col-sm-12">
-        <ChapterTitle :text="chapter.title"/>
+        <chapter-title :text="chapter.title"/>
         <ContentTitle :text="content.title"/>
         <div class="summary">{{ content.summary }}</div>
       </div>

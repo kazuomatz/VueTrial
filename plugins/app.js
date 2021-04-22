@@ -1,9 +1,9 @@
 import Vue from 'vue'
-import ChapterTitle from '~/components/chapter-title'
-import ContentTitle from '~/components/content-title'
+import capterTitle from '~/components/chapter-title'
+import contentTitle from '~/components/content-title'
 
-Vue.component('ChapterTitle', ChapterTitle)
-Vue.component('ContentTitle', ContentTitle)
+Vue.component('chapter-title', capterTitle)
+Vue.component('content-title', contentTitle)
 
 import chapters from "../data/chapters"
 Vue.prototype.$chapters = chapters

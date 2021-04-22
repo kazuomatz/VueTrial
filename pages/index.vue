@@ -2,7 +2,7 @@
   <div class="app-body container-fluid">
     <div class="row">
       <div class="col-sm-12" v-for="key in Object.keys(chapters)" :key="key">
-        <ChapterTitle :text="chapters[key].title"/>
+        <chapter-title :text="chapters[key].title"/>
         <ul>
           <li v-for="content in chapters[key].contents" :key="content.title">
             <nuxt-link :to="chapters[key].path + '/' + content.path">

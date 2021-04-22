@@ -9,6 +9,9 @@
             <div class="caption">
               {{ currentPhoto.caption }}
             </div>
+
+            <p class="text-right">素材提供： <a href="https://www.pakutaso.com/" target="_blank">ぱくたそ</a></p>
+
             <div class="buttons">
               <b-button :to="'/photos/' + (id - 1)" :disabled="id - 1 === 0" variant="primary">
                 <fa icon="angle-double-left"/>
