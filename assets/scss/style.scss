@@ -81,6 +81,12 @@ pre[class*="language-"]{
   padding-left: 20px !important;
 }
 
+ul.index {
+  li {
+    list-style:  none;
+  }
+}
+
 ul.content {
   padding-left: 20px;
 }
@@ -89,3 +95,4 @@ ul.content {
     margin-top: 30px;
   }
 }
+

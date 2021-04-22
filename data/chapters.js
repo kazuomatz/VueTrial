@@ -1,10 +1,10 @@
 const chapters = {
   chapter1: {
-    title: '1. Vueの基本',
+    title: 'Vueの基本',
     path:'chapter1',
     contents: [
       {
-        title: '1.宣言的レンダリング',
+        title: '宣言的レンダリング',
         path: 'index1',
         summary: 'テンプレート構文を使って宣言的にデータをDOMに描画します。',
         html:
@@ -22,7 +22,7 @@ const chapters = {
 }`
       },
       {
-        title: '2. 条件分岐による制御',
+        title: '条件分岐による制御',
         path: 'index2',
         summary: 'v-if ディレクティブを使って要素の表示の有無を切り換えます。',
         html:
@@ -44,7 +44,7 @@ const chapters = {
 }`
       },
       {
-        title: '3. 条件分岐による制御(v-show)',
+        title: '条件分岐による制御(v-show)',
         path: 'index3',
         summary: 'v-show ディレクティブを使って要素の表示/非表示を切り換えます。v-ifディレクティブとの違いは、v-ifディレクティブはDOM要素を作成するかどうかを制御するのに対して、v-showディレクティブはDOM要素は作成し、表示するかしないかを制御します。',
         html:
@@ -62,7 +62,7 @@ const chapters = {
 }`
       },
       {
-        title: '4. ループ',
+        title: 'ループ',
         path: 'index4',
         summary: 'v-for ディレクティブを使って配列要素をレンダリングします。',
         html:
@@ -89,7 +89,7 @@ const chapters = {
 }`
       },
       {
-        title: '5. フォーム入力バインディング',
+        title: 'フォーム入力バインディング',
         path: 'index5',
         summary: 'v-model ディレクティブを使ってユーザーフォームの値をオブジェクトにバインドします。',
         html:
@@ -113,7 +113,7 @@ const chapters = {
 }`
       },
       {
-        title: '6. フォーム入力バインディング（計算機)',
+        title: 'フォーム入力バインディング（計算機)',
         path: 'index6',
         summary: 'v-model ディレクティブを使ってユーザーフォームの値をオブジェクトにバインドします。',
         html:
@@ -154,7 +154,7 @@ const chapters = {
 }`
       },
       {
-        title: '7. イベントハンドリング',
+        title: 'イベントハンドリング',
         path: 'index7',
         summary: 'v-on ディレクティブを使ってイベントをハンドリングします。',
         html:
@@ -182,7 +182,7 @@ const chapters = {
 }`
       },
       {
-        title: '8. Vueコンポーネントのファイルの構成',
+        title: 'Vueコンポーネントのファイルの構成',
         path: 'index8',
         summary: '拡張子.vueのファイルは、単一ファイルコンポーネントのファイル(SFC:Single File Component)です。Viewを構成するHTMLテンプレート、JavaScript、CSSから構成されます。',
         html: `<template>
@@ -212,7 +212,7 @@ const chapters = {
    `
       },
       {
-        title: '9. メソッドと算出プロパティ(1)',
+        title: 'メソッドと算出プロパティ(1)',
         path: 'index9',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
         html:
@@ -265,7 +265,7 @@ const chapters = {
 }`
       },
       {
-        title: '10. メソッドと算出プロパティ(2)',
+        title: 'メソッドと算出プロパティ(2)',
         path: 'index10',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
         html: `
@@ -320,7 +320,7 @@ const chapters = {
 }`
       },
       {
-        title: '11. ウォッチャー',
+        title: 'ウォッチャー',
         path: 'index11',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
         html:
@@ -355,7 +355,7 @@ const chapters = {
 }`
       },
       {
-        title: '12. Vueのライフサイクル',
+        title: 'Vueのライフサイクル',
         path: 'index12',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
         html:
@@ -409,7 +409,7 @@ const chapters = {
 }`
       },
       {
-        title: '13. Vue コンポーネント',
+        title: 'Vue コンポーネント',
         path: 'index13',
         summary: 'Vueをコンポーネント化して再利用可能にします。',
         html:
@@ -468,11 +468,11 @@ export default {
     ],
   },
   chapter2: {
-    title: '2.Nuxt.Jsの基本',
+    title: 'NuxtJsの基本',
     path:'chapter2',
     contents: [
       {
-        title: '1.デプロイターゲット',
+        title: 'デプロイターゲット',
         path: 'index1',
         html:
 `
@@ -501,7 +501,7 @@ export default {
   :`
       },
       {
-        title: '2.ディクトリー構造とルーティング',
+        title: 'ディクトリー構造とルーティング',
         path: 'index2',
         html:
 `<div class="sandbox">
@@ -553,7 +553,7 @@ export default {
 `
       },
       {
-        title: '3. BootStrapVueの使用',
+        title: 'BootStrapVueの使用',
         path: 'index3',
         summary: 'Vueをコンポーネント化して再利用可能にします。',
         html: `<b-col sm="12">
@@ -600,13 +600,12 @@ export default {
   </b-card>
 </b-col>`,
         code: `export default {
-  name: 'index13.vue',
   data() {
     return  {
       message: '',
       form : {
         email: '',
-        food: '',
+        food: null,
         color: []
       },
       foods: [{ text: 'ひとつ選んで下さい', value: null }, 'カツ丼', 'オムライス', 'ざるそば', 'ラーメン'],
@@ -626,10 +625,41 @@ export default {
     }
   }
 }`
-
-      }
-
-
+      },
+      {
+        title: 'vue-fontawesomeの使用',
+        path: 'index4',
+        summary: 'vue-fontawesomeを使用して、FontAwesome 5 のWebフォントをVueから使えるようにします。',
+        html: `<div class="icons">
+  <fa :icon="icon" v-for="icon in icons" :style="{ color: randomColor() }"/>
+</div>`,
+        code: `export default {
+  data() {
+    return  {
+      icons: [  'home', 'file', 'bicycle', 'box-open', 'car', 'cat', 'dove',
+                'feather', 'football-ball', 'grin-beam-sweat', 'mountain', 'camera-retro'
+      ],
+      colors: [ '#82c91e', '#f783ac', '#4c6ef5', '#15aabf','#be4bdb', '#fd7e14', '#183153', '#ff0000' ]
+    }
+  },
+  methods: {
+    randomColor() {
+      return this.colors [ Math.floor(Math.random() * this.colors.length) ];
+    }
+   }
+ }`,
+      css: `<style lang="scss" scoped>
+  .icons {
+    padding: 30px 15px;
+    margin: 30px 0;
+    border: 1px solid #ccc;
+    [data-icon] {
+      font-size: 5rem;
+      padding: 5px;
+    }
+  }
+</style>`
+}
     ]
   },
   chapter3: {

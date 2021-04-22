@@ -85,17 +85,12 @@ Vuesax</vue-code-highlight>
 　　　:
  }</vue-code-highlight>
 
-
         <span class="badge badge-primary">app.scss</span>
-
         <vue-code-highlight language="css">// BootStrap テーマカスタム
 @import "./variant";
 @import "~bootstrap/scss/bootstrap.scss";</vue-code-highlight>
 
-
         <p class="mt-3">/assets/scss/variant.scss ファイルにテーマの設定をしてからbootstrap.scssを読み込むようにします。</p>
-
-
       </b-col>
       <b-col sm="12">
         <b-card header="入力フォーム">
@@ -128,7 +123,7 @@ Vuesax</vue-code-highlight>
                 <b-form-checkbox-group
                   v-model="form.color"
                   id="color">
-                  <b-form-checkbox v-for="color in colors" :value="color.color" :key="color.id">
+                  <b-form-checkbox v-for="color in colors" :value="color.value" :key="color.id">
                     <span class="color" :style="{backgroundColor: color.value}"></span>{{ color.text }}
                   </b-form-checkbox>
                 </b-form-checkbox-group>
@@ -170,7 +165,7 @@ export default {
       message: '',
       form : {
         email: '',
-        food: '',
+        food: null,
         color: []
       },
       foods: [{ text: 'ひとつ選んで下さい', value: null }, 'カツ丼', 'オムライス', 'ざるそば', 'ラーメン'],

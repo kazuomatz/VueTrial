@@ -3,13 +3,13 @@
     <div class="row">
       <div class="col-sm-12" v-for="key in Object.keys(chapters)" :key="key">
         <chapter-title :text="chapters[key].title"/>
-        <ul>
+        <ol class="index">
           <li v-for="content in chapters[key].contents" :key="content.title">
             <nuxt-link :to="chapters[key].path + '/' + content.path">
               {{content.title}}
             </nuxt-link>
           </li>
-        </ul>
+        </ol>
       </div>
     </div>
   </div>

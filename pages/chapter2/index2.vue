@@ -21,7 +21,7 @@
 
         <h3 class="mt-5">静的ルーティング</h3>
         <p>
-          Nuxt.js は pages ディレクトリにある Vue ファイルのディレクトリ構造に基づいて、<a href="https://router.vuejs.org/ja/" target="_blank">vue-router</a> の設定を自動的に生成します。pages ディレクトリに .vue ファイルを作成すると、特別な設定をせずとも基本的なルーティングが動作するようになります。
+          NuxtJs は pages ディレクトリにある Vue ファイルのディレクトリ構造に基づいて、<a href="https://router.vuejs.org/ja/" target="_blank">vue-router</a> の設定を自動的に生成します。pages ディレクトリに .vue ファイルを作成すると、特別な設定をせずとも基本的なルーティングが動作するようになります。
         </p>
         <p> → <a href="https://ja.nuxtjs.org/docs/2.x/features/file-system-routing/" target="_blank">ファイルシステムに基づくルーティング</a></p>
         <vue-code-highlight language="bash">- pages/
