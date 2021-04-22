@@ -631,7 +631,7 @@ export default {
         path: 'index4',
         summary: 'vue-fontawesomeを使用して、FontAwesome 5 のWebフォントをVueから使えるようにします。',
         html: `<div class="icons">
-  <fa :icon="icon" v-for="icon in icons" :style="{ color: randomColor() }"/>
+  <fa :icon="icon" v-for="icon in icons" :style="{ color: randomColor() }" :key="icon"/>
 </div>`,
         code: `export default {
   data() {

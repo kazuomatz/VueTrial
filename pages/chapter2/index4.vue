@@ -48,7 +48,7 @@ Vue.component('fa', FontAwesomeIcon)</vue-code-highlight>
 
       <b-col sm="12">
         <div class="icons">
-          <fa :icon="icon" v-for="icon in icons" :style="{ color: randomColor() }"/>
+          <fa :icon="icon" v-for="icon in icons" :style="{ color: randomColor() }" :key="icon"/>
         </div>
       </b-col>
 
