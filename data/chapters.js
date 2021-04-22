@@ -4,7 +4,7 @@ const chapters = {
     path:'chapter1',
     contents: [
       {
-        title: '1.1 宣言的レンダリング',
+        title: '1.宣言的レンダリング',
         path: 'index1',
         summary: 'テンプレート構文を使って宣言的にデータをDOMに描画します。',
         html:
@@ -22,7 +22,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.2 条件分岐による制御',
+        title: '2. 条件分岐による制御',
         path: 'index2',
         summary: 'v-if ディレクティブを使って要素の表示の有無を切り換えます。',
         html:
@@ -44,7 +44,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.3 条件分岐による制御(v-show)',
+        title: '3. 条件分岐による制御(v-show)',
         path: 'index3',
         summary: 'v-show ディレクティブを使って要素の表示/非表示を切り換えます。v-ifディレクティブとの違いは、v-ifディレクティブはDOM要素を作成するかどうかを制御するのに対して、v-showディレクティブはDOM要素は作成し、表示するかしないかを制御します。',
         html:
@@ -62,7 +62,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.4 ループ',
+        title: '4. ループ',
         path: 'index4',
         summary: 'v-for ディレクティブを使って配列要素をレンダリングします。',
         html:
@@ -89,7 +89,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.5 フォーム入力バインディング',
+        title: '5. フォーム入力バインディング',
         path: 'index5',
         summary: 'v-model ディレクティブを使ってユーザーフォームの値をオブジェクトにバインドします。',
         html:
@@ -113,7 +113,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.6 フォーム入力バインディング（計算機)',
+        title: '6. フォーム入力バインディング（計算機)',
         path: 'index6',
         summary: 'v-model ディレクティブを使ってユーザーフォームの値をオブジェクトにバインドします。',
         html:
@@ -154,7 +154,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.7 イベントハンドリング',
+        title: '7. イベントハンドリング',
         path: 'index7',
         summary: 'v-on ディレクティブを使ってイベントをハンドリングします。',
         html:
@@ -182,7 +182,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.8 Vueコンポーネントのファイルの構成',
+        title: '8. Vueコンポーネントのファイルの構成',
         path: 'index8',
         summary: '拡張子.vueのファイルは、単一ファイルコンポーネントのファイル(SFC:Single File Component)です。Viewを構成するHTMLテンプレート、JavaScript、CSSから構成されます。',
         html: `<template>
@@ -212,7 +212,7 @@ const chapters = {
    `
       },
       {
-        title: '1.9 メソッドと算出プロパティ(1)',
+        title: '9. メソッドと算出プロパティ(1)',
         path: 'index9',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
         html:
@@ -265,7 +265,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.10 メソッドと算出プロパティ(2)',
+        title: '10. メソッドと算出プロパティ(2)',
         path: 'index10',
         summary: 'メソッド(methods)、算出プロパティ（computed)を定義できます。',
         html: `
@@ -320,7 +320,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.11 ウォッチャー',
+        title: '11. ウォッチャー',
         path: 'index11',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
         html:
@@ -355,7 +355,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.12 Vueのライフサイクル',
+        title: '12. Vueのライフサイクル',
         path: 'index12',
         summary: 'データ、算出プロパティを監視して、値が変化したら処理を行います。',
         html:
@@ -409,7 +409,7 @@ const chapters = {
 }`
       },
       {
-        title: '1.13 Vue コンポーネント',
+        title: '13. Vue コンポーネント',
         path: 'index13',
         summary: 'Vueをコンポーネント化して再利用可能にします。',
         html:
@@ -464,7 +464,7 @@ export default {
     }
   }
 }`
-      },
+      }
     ],
   },
   chapter2: {
@@ -552,6 +552,83 @@ export default {
 }
 `
       },
+      {
+        title: '3. BootStrapVueの使用',
+        path: 'index3',
+        summary: 'Vueをコンポーネント化して再利用可能にします。',
+        html: `<b-col sm="12">
+  <b-card header="入力フォーム">
+    <b-card-body>
+      <b-form v-on:submit="onSubmit" v-on:submit="onSubmit" action="/" method="post">
+        <b-form-group
+          id="input-group-1"
+          label="メールアドレス"
+          label-for="email"
+          description="ここはメールアドレスの入力欄です。">
+
+          <b-form-input
+            id="email"
+            v-model="form.email"
+            type="email"
+            placeholder="メールアドレスを入力して下さい。"
+            required
+          />
+        </b-form-group>
+
+        <b-form-group id="input-group-2" label="好きな食べ物" label-for="food">
+          <b-form-select
+            id="food"
+            v-model="form.food"
+            :options="foods"
+            required
+          ></b-form-select>
+        </b-form-group>
+
+        <b-form-group id="input-group-3" label="好きな色">
+          <b-form-checkbox-group
+            v-model="form.color"
+            id="color">
+            <b-form-checkbox v-for="color in colors" :value="color.value">
+              <span class="color" :style="{backgroundColor: color.value}"></span>{{ color.text }}
+            </b-form-checkbox>
+          </b-form-checkbox-group>
+        </b-form-group>
+
+        <b-button type="submit" variant="primary">送信</b-button>
+      </b-form>
+    </b-card-body>
+  </b-card>
+</b-col>`,
+        code: `export default {
+  name: 'index13.vue',
+  data() {
+    return  {
+      message: '',
+      form : {
+        email: '',
+        food: '',
+        color: []
+      },
+      foods: [{ text: 'ひとつ選んで下さい', value: null }, 'カツ丼', 'オムライス', 'ざるそば', 'ラーメン'],
+      colors: [
+        { id: 1, value: 'blue', text: '青'},
+        { id: 2, value: 'red', text: '赤'},
+        { id: 3, value: 'yellow', text: '黄色'},
+        { id: 4, value: 'green', text: '緑'},
+        { id: 5, value: 'purple', text: '紫'},
+        { id: 6, value: 'orange', text: 'オレンジ'},
+      ]
+    }
+  },
+  methods: {
+    onSubmit() {
+      console.log("submit");
+    }
+  }
+}`
+
+      }
+
 
     ]
   },
