@@ -11,7 +11,7 @@
       <div class="col-sm-12">
         <div class="row">
           <animal-component :object="animal" class="col-sm-2"
-                  v-for="animal in animals" :key="animal.key"
+                  v-for="animal in animals" :key="animal.id"
                   v-on:bark="message = $event"/>
         </div>
         <div class="message">{{ message }}</div>

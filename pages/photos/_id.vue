@@ -61,7 +61,7 @@ export default {
   },
   computed: {
     currentPhoto() {
-      return this.photos.filter( (article) => { return article.id === this.id } )[0]
+      return this.photos.filter( (photo) => { return photo.id === this.id } )[0]
     },
     currentPhotoPath() {
       return '/images/' + this.currentPhoto.file;

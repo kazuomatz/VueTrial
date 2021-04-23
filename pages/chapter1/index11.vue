@@ -61,10 +61,10 @@ export default {
     }
   },
   watch: {
-    count() {
+    count(after, before) {
       if (this.count % 10 === 0 ) {
         /* ajaxでデータを送信 */
-        console.log("データ送信 カウント: " + this.count)
+        console.log("データ送信 カウント: " + this.count, before, after)
       }
     }
   },
