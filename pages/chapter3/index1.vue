@@ -65,6 +65,11 @@
       <vue-code-highlight language="javascript">{{content.code}}</vue-code-highlight>
     </div>
 
+    <div class="col-sm-12 mt-5">
+      /pages/demo/index.vue に雛形があります。こちらに実装してみましょう。
+      作例は<nuxt-link to="/demo/index2">こちら </nuxt-link>。
+    </div>
+
     <div class="col-sm-4 cos-12 offset-sm-4 mt-5">
       <nuxt-link to='/' class="btn btn-block btn-primary"> <fa icon="home"></fa> TOPに戻る </nuxt-link>
     </div>
